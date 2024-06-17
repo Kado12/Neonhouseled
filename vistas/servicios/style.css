@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 100%;
+}
+
+.subtitulo {
+    margin-bottom: 35px;
+}
+
+
+
+
+
+.container-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #1b4092;
+    height: 400px;
+    overflow: hidden;
+}
+
+.text1 {
+        width: 50%;
+    background-color: #1b4092;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: -20px;
+}
+
+.text1, .curvas, .text2 {
+    height: 100%;
+    border: none;
+}
+
+.logo-nhl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: auto;
+    padding: 5px;
+}
+
+.welcom__item__titulo {
+    color: white;
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.welcom__item__text {
+    font-weight: normal;
+    padding: 0 20px;
+}
+
+.welcom__item__text, .welcom__item__contacto {
+    color: white;
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.welcom__item__text, .welcom__item__contacto, .welcom__item__titulo1 {
+    color: white;
+    margin: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.curvas {
+    width: 15%;
+    position: relative;
+    overflow: hidden;
+}
+
+.curved-green, .curved-white {
+    position: absolute;
+    transform-origin: center center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    width: 110%;
+    height: 170px;
+}
+.curved-green {
+    left: 60%;
+    background: #5db327;
+    width: 440px;
+    z-index: 1;
+}
+.curved-white {
+    left: calc(60% + 30px);
+    background: #fff;
+    width: 415px;
+    z-index: 2;
+}
+
+.text2 {
+    width: 35%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1110px) {
+    .text1, .curvas, .text2 {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        padding: 15px 5px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .welcom__item__titulo, .welcom__item__titulo1, .welcom__item__text, .welcom__item__contacto {
+        font-size: 14px;
+        line-height: 1.4;
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+}
