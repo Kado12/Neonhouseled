@@ -120,7 +120,7 @@ $_SESSION['imagen'] = 'FAST FOOD.jpg';
         </div>
         <h2 class="welcom__item__titulo">REVITALIZA TU EXPERIENCIA DE COMIDA RÁPIDA CON UN DISEÑO DE INTERIORES QUE DESPIERTA LOS SENTIDOS Y ESTIMULA EL APETITO. </h2>
         <h3 class="welcom__item__text">SI ANSIAS TRANSFORMAR TU LOCAL EN UN DESTINO IRRESISTIBLE PARA LOS AMANTES DE LA COMIDA RÁPIDA, NUESTRO ENFOQUE ES TU MEJOR OPCIÓN</h3>
-        <h3 class="welcom__item__contacto">¡¡NO BUSQUES MÁS, SOMOS TU MEJOR ALIADOS!!</h3>
+        <h3 class="welcom__item__contacto">¡¡NO BUSQUES MÁS, SOMOS TU MEJOR ALIADO!!</h3>
     </div>
     <div class="curvas">
         <section class="curved-green"></section>

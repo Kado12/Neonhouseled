@@ -121,8 +121,8 @@ $_SESSION['imagen'] = 'HELADERIA.jpeg';
         <h2 class="welcom__item__titulo">SUMÉRGETE EN UN MUNDO DE DULZURA Y FRESCURA CON NUESTROS DISEÑOS DE INTERIORES PARA HELADERÍAS</h2>
         <h3 class="welcom__item__text"> SI DESEAS QUE TU HELADERÍA DESTAQUE EN UN MERCADO COMPETITIVO Y CREAR UN AMBIENTE QUE ATRAIGA Y RETENGA A TUS CLIENTES, NUESTRO ENFOQUE ES TU MEJOR OPCIÓN</h3>
         <h3 class="welcom__item__contacto">¡¡NO ESPERES MÁS Y CONTÁCTANOS!!</h3>
-    </div>
-    <div class="curvas">
+    </div>  
+    <div class="curvas">    
         <section class="curved-green"></section>
         <section class="curved-white"></section>
     </div>

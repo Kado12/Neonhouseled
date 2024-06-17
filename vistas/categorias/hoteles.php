@@ -118,8 +118,8 @@ $_SESSION['imagen'] = 'HOTELES.jpg';
         <div class="logo-nhl">
         </div>
         <h2 class="welcom__item__titulo">TRANSFORMAMOS TU HOTEL EN UN REFUGIO PERFECTO PARA TUS VISITANTES</h2>
-        <h3 class="welcom__item__text"> EXPERTOS EN DISEÑO INTERIOR, OFRECEMOS SOLUCIONES PERSONALIZADAS PARA DESTACAR TUS ESPACIOS</h3>
-        <h3 class="welcom__item__contacto">¡¡CONTACTA HOY MISMO CON NUESTRO SERVICIO DE PRIMER NIVEL Y DESCUBRE CÓMO MEJORAR LA EXPERIENCIA DE TUS HUÉSPEDES!!</h3>
+        <h3 class="welcom__item__text"> EXPERTOS EN DISEÑO INTERIOR, OFRECEMOS SOLUCIONES PERSONALIZADAS PARA DESTACAR TUS ESPACIOS </h3>
+        <h3 class="welcom__item__contacto">CONTACTA HOY MISMO CON NUESTRO SERVICIO DE PRIMER NIVEL Y DESCUBRE CÓMO MEJORAR LA EXPERIENCIA DE TUS HUÉSPEDES ¡¡NO ESPERES MAS!!</h3>
     </div>
     <div class="curvas">
         <section class="curved-green"></section>

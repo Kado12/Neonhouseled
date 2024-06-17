@@ -20,47 +20,47 @@
                             break;
                           case "VETERINARIA":
                             ?>
-                            <h1>DISEÑA UNA VETERINARIA QUE BRINDE CONFIANZA Y CALIDEZ A TUS CLIENTES</h1>
+                            <h1>CREA UN AMBIENTE ACOGEDOR PARA TI Y TUS PACIENTES PELUDOS</h1>
                             <?php
                             break;
                           case "TERRAZA":
                             ?>
-                            <h1>CON NUESTROS SERVICIOS EN DISEÑO, OBTENDRÁS LO MEJOR PARA TU TERRAZA</h1>
+                            <h1>¡DISEÑOS ÚNICOS PARA TU TERRAZA SOÑADA!</h1>
                             <?php
                             break;
                           case "SANGUCHERÍA":
                             ?>
-                            <h1>RENUEVA TU SANGUCHERÍA PARA SER EL DESTINO FAVORITO DE TODOS</h1>
+                            <h1>RENUEVA TU SANGUCHERÍA CON NUESTRO DISEÑO INTERIOR ÚNICO</h1>
                             <?php
                             break;
                           case "SALÓN DE SPA Y BARBERÍA":
                             ?>
-                            <h1>DISEÑA UN SPA Y BARBERÍA QUE OFREZCA LUJO Y TRANQUILIDAD</h1>
+                            <h1>HAZ DE TU SALON DE SPA Y BARBERÍA UN LUGAR MEJOR</h1>
                             <?php
                             break;
                           case "SALÓN DE BELLEZA Y BARBERÍA":
                             ?>
-                            <h1>TE AYUDAMOS CON TU DISEÑO DE SALÓN DE BELLEZA Y BARBERÍA. DESCUBRE LO MEJOR EN DISEÑOS</h1>
+                            <h1>IMPRESIONATE CON TU SALÓN DE BELLEZA Y BARBERÍA</h1>
                             <?php
                             break;
                           case "ROPA":
                             ?>
-                            <h1>HAZ EL CAMBIO DE TU TIENDA DE ROPA QUE TANTO NECESITAS</h1>
+                            <h1>HAZ EL CAMBIO DE TU TIENDA DE ROPA DE ENSUEÑO</h1>
                             <?php
                             break;
                           case "RESTOBAR":
                             ?>
-                            <h1>TE AYUDAMOS A POTENCIAR TU RESTOBAR, DESCUBRE LO MEJOR EN DISEÑO DESDE EL PRIMER VISTAZO</h1>
+                            <h1>POTENCIA EL DISEÑO DE TU RESTOBAR, DESDE EL PRIMER VISTAZO</h1>
                             <?php
                             break;
                           case "RESTAURANTE":
                             ?>
-                            <h1>CON NUESTROS SERVICIOS EN DISEÑO DE INTERIOR, TRANSFORMA TU RESTAURANTE A UNO DE MÁXIMO NIVEL</h1>
+                            <h1>TRANSFORMA TU RESTAURANTE A UNO DE MÁXIMO NIVEL</h1>
                             <?php
                             break;
                           case "RECEPCIONES":
                             ?>
-                            <h1>DISEÑA UN ESPACIO DE RECEPCIONES QUE DEJE UNA IMPRESIÓN DURADERA</h1>
+                            <h1>DISEÑA UN ESPACIO DE RECEPCIONES QUE DEJE LO MEJOR DE TI</h1>
                             <?php
                             break;
                           case "POLLLERÍA":
@@ -70,7 +70,7 @@
                             break;
                           case "PIZZERÍA":
                             ?>
-                            <h1>TRANSFORMA TU PIZZERÍA EN EL LUGAR PREFERIDO PARA DISFRUTAR UNA BUENA PIZZA</h1>
+                            <h1>TRANSFORMA TU PIZZERÍA, QUE SEA TU LUGAR PREFERIDO</h1>
                             <?php
                             break;
                           case "PANADERÍA Y PASTELERÍA":
@@ -80,72 +80,72 @@
                             break;
                           case "MINIMARKET":
                             ?>
-                            <h1>OPTIMIZA EL ESPACIO DE TU MINIMARKET PARA UNA EXPERIENCIA DE COMPRA PERFECTA</h1>
+                            <h1>POTENCIA TU MINIMARKET A SU MÁXIMO NIVEL</h1>
                             <?php
                             break;
                           case "HOTELES":
                             ?>
-                            <h1>HAZ DE TU HOTEL UN LUGAR ACOGEDOR Y ELEGANTE PARA TUS HUÉSPEDES</h1>
+                            <h1>HAZ DE TU HOTEL UN LUGAR ACOGEDOR Y ELEGANTE</h1>
                             <?php
                             break;
                           case "HOGAR":
                             ?>
-                            <h1>REDISEÑA TU HOGAR PARA MAYOR CONFORT Y ESTILO</h1>
+                            <h1>HAZ DE TU CASA UN REFUGIO DE TRANQUILIDAD Y ESTILO</h1>
                             <?php
                             break;
                           case "HELADERÍA":
                             ?>
-                            <h1>CREA UNA HELADERÍA QUE ATRAIGA POR SU FRESCURA Y ESTILO</h1>
+                            <h1>TRANSFORMA TU HELADERÍA EN UN PARAÍSO DE SABORES</h1>
                             <?php
                             break;
                           case "GIMNASIO":
                             ?>
-                            <h1>DISEÑA UN GIMNASIO QUE MOTIVE Y ENERGICE A TUS CLIENTES</h1>
+                            <h1>ENERGIZA TU GIMNASIO CON ESTILO RENOVADO</h1>
                             <?php
                             break;
                           case "FUENTE DE SODA":
                             ?>
-                            <h1>RENUEVA TU FUENTE DE SODA PARA UN AMBIENTE RETRO Y ENCANTADOR</h1>
+                            <h1>TRANSFORMA TU FUENTE DE SODA EN UN OASIS RETRO</h1>
                             <?php
                             break;
                           case "FAST FOOD":
                             ?>
-                            <h1>OPTIMIZA TU LOCAL DE COMIDA RÁPIDA PARA UNA EXPERIENCIA RÁPIDA Y DELICIOSA</h1>
+                            <h1>TRANSFORMA CON RAPIDEZ Y SABOR TU LOCAL DE FAST FOOD</h1>
                             <?php
                             break;
                           case "ESTILO INDUSTRIAL":
                             ?>
-                            <h1>DESCUBRE CÓMO FUSIONAMOS EL ENCANTO URBANO CON LA ELEGANCIA INDUSTRIAL EN CADA ESPACIO QUE CREAMOS</h1>
+                            <h1>REVIVE CON ESTILO URBANO E INDUSTRIAL</h1>
                             <?php
                             break;
                           case "DORMITORIO PARA NIÑOS":
                             ?>
-                            <h1>CONVIERTE EL DORMITORIO DE TUS HIJOS EN UN MUNDO DE SUEÑOS</h1>
+                            <h1>HAZ DE SU DORMITORIO UN LUGAR DE FANTASÍA</h1>
                             <?php
                             break;
                           case "DISCOTECA":
                             ?>
-                            <h1>DISEÑA LA DISCOTECA MÁS IMPACTANTE Y VIBRANTE DE LA CIUDAD</h1>
+                            <h1>DISEÑA UNA DISCOTECA IMPACTANTE Y LLENA DE ENERGÍA</h1>
                             <?php
                             break;
                           case "DEPARTAMENTO":
                             ?>
-                            <h1>TRANSFORMA TU ESPACIO EN UN HOGAR DE ENSUEÑO CON LOS MEJORES DISEÑOS QUE TENEMOS PARA TI</h1>
+                            <h1>HAZ DE TU ESPACIO UN VERDADERO HOGAR DE ENSUEÑO</h1>
                             <?php
                             break;
                           case "CLÍNICA DENTAL":
                             ?>
-                            <h1>DALE A TU CLÍNICA DENTAL UN TOQUE PROFESIONAL Y ACOGEDOR</h1>
+                            <h1>BRINDA SONRISAS EN UN AMBIENTE DENTAL DE PRIMERA</h1>
                             <?php
                             break;
                           case "CEVICHERÍA":
                             ?>
-                            <h1>CREA UN AMBIENTE FRESCO Y VIBRANTE QUE TE TRANSPORTARÁ AL CORAZÓN DEL OCÉANO</h1>
+                            <h1>VIBRA CON FRESCURA EN TU CEVICHERÍA</h1>
                             <?php
                             break;
                           case "CAFETERÍA Y JUGUERÍA":
                             ?>
-                            <h1>DISEÑA UN ESPACIO DONDE CADA SORBO ES UNA EXPERIENCIA ÚNICA</h1>
+                            <h1>TRANSFORMA TU CAFETERÍA EN UN DESTINO INOLVIDABLE</h1>
                             <?php
                             break;
                           default:
@@ -230,7 +230,7 @@
                             break;
                           case "POLLLERÍA":
                             ?>
-                            <button type="submit" value="Enviar" id="btn-enviar">¡CON UN CLICK SABOREA CADA DETALLE!</button>
+                            <button type="submit" value="Enviar" id="btn-enviar">RENUEVA TU POLLERÍA PARA OFRECER UN AMBIENTE FAMILIAR</button>
                             <?php
                             break;
                           case "PIZZERÍA":
