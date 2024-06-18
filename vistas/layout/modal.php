@@ -5,7 +5,7 @@
 
 <div class="modal" id="modal" style="display: none;">
     <div class="contenedor activo" id="modal1">
-    <button class="cerrar" id="cerrar" onclick="cerrarModal();">X</button>
+    <button class="cerrar" id="cerrar">X</button>
         <div class="contenido">
             <div class="izquierda">
                 <img src="../../public/imagenes/catalogo/<?php echo $_SESSION['imagen'] ?>">
@@ -156,21 +156,21 @@
                         ?>
                         
                         
-                <form action="" method="POST" id="login">
+                <form action="" method="POST" id="id-form">
                     <input type="hidden" name="servicio" value="<?php echo $_SESSION['servicio'] ?>">
                     <input type="hidden" name="categoria" value="<?php echo $_SESSION['categoria'] ?>">
                     
-                    <div class="form-registro">
+                    <div class="form-registro form-group" >
                         
-                        <input type="text" name="nombre" placeholder="Nombre" id="nombre" required>
+                        <input type="text" name="name" placeholder="Nombre" id="name" required>
                     </div>
-                    <div class="form-registro">
+                    <div class="form-registro form-group">
                         
-                        <input type="tel" name="telf" placeholder="Teléfono" id="telefono" required>
+                        <input type="tel" name="phone" placeholder="Teléfono" id="phone" required>
                     </div>
-                    <div class="form-registro">
+                    <div class="form-registro form-group">
                         
-                        <input type="email" name="correo" placeholder="Email" id="correo" required><br>
+                        <input type="email" name="email" placeholder="Email" id="email" required><br>
                     </div>
                     <div class="form-button">
                         <?php 
@@ -345,9 +345,17 @@
     </div>
 </div>
 
-<script src="./public/js/mensajesWhatsapp.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<!-- <script src="./public/js/mensajesWhatsapp.js"></script> -->
 <!-- <script defer src="/public/js/addSuscriptor.js" ></script> -->
+
+ <!-- Librerias -->
+ <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+ <script
+			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.0/js/bootstrapValidator.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
 
 <style>
     #modal1 {
@@ -355,23 +363,51 @@
     }
 </style>
 
-
+<!--Script para ejecutar funciones -->
 <script>
+  document.addEventListener('DOMContentLoaded',function(){
+    mostrarModalDespuesDe30Segundos();
+    submitForm();
+  })
+</script>
+
+<!-- MODAL -->
+<script>
+
     // Función para mostrar el modal despues de 13 segundos
     function mostrarModalDespuesDe30Segundos() {
         setTimeout(function() {
             document.getElementById('modal').style.display = 'block';
-        }, 13000); // 13 segundos
+        }, 13000); 
     }
 
-    
-    window.onload = function() {
-        mostrarModalDespuesDe30Segundos();
-    };
+    // const btnCerrar = document.querySelector('.btn-cerrar');
+// const modalContainer = document.querySelector('.modal-main-background')
+ 
+
+// document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
+
+// // Función para mostrar el modal después de 1 segundos
+// function mostrarModalDespuesDe5Segundos() {
+//     if (localStorage.getItem("whatsappData")) {
+//         modalContainer.style.display = 'none';
+//     } else {
+//         setTimeout(() => {
+//             modalContainer.style.display = 'flex';
+//             validarDatos();
+//         }, 1000); // 1000 milisegundos = 1 segundos
+//     }
+// }
+
+// // Agregar evento al botón de cerrar
+// btnCerrar.addEventListener('click', () => {
+//     console.log("clickeaste");
+//     modalContainer.style.display = 'none';
+// });
 </script> 
 
 
-<script>
+<!-- <script>
     // Se envía el formulario con jQuery
     $("form").on("submit", function (e) {
         e.preventDefault();
@@ -424,75 +460,48 @@
             }
         });
     });
-</script>
+</script> -->
 
+<!-- FORM -->
 <script>
-const btnCerrar = document.querySelector('.btn-cerrar');
-const modalContainer = document.querySelector('.modal-main-background')
-const objRegex = {
-    telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
-    gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
+  const objRegex = {
+     telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
+     gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
 };
+  // Submit
+  function submitForm() {
+      const formMain = document.querySelector("#id-form");
+      formMain.addEventListener("submit", (e) => {
+          e.preventDefault();
+          // validateData();
+      })
+  }
+  //Validamos los datos 
+  function validateData() {
+      const nombreInput = document.getElementById('name').value;
+      const telefonoInput = document.getElementById('phone').value;
+      const emailInput = document.getElementById('email').value;
 
-document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
+      // Validamos ??
+      const telefono = telefonoInput.replace(/\s/g, '');
 
-// Función para mostrar el modal después de 1 segundos
-function mostrarModalDespuesDe5Segundos() {
-    if (localStorage.getItem("whatsappData")) {
-        modalContainer.style.display = 'none';
-    } else {
-        setTimeout(() => {
-            modalContainer.style.display = 'flex';
-            validarDatos();
-        }, 1000); // 1000 milisegundos = 1 segundos
-    }
-}
+      const email = emailInput.trim();
+      const telefonoValido = objRegex.telefono.test(telefono);
+      const emailValido = objRegex.gmail.test(email);
 
-// Agregar evento al botón de cerrar
-btnCerrar.addEventListener('click', () => {
-    console.log("clickeaste");
-    modalContainer.style.display = 'none';
-});
+      if (nombreInput.value === '') alert('El nombre no debe estar vacio')
+      if (!telefonoValido) alert("El número de teléfono debe incluir 9 dígitos")
+      if (!emailValido) alert("Debe de ingresar un correo valido.")
 
-
-function validarDatos() {
-    const formMain = document.querySelector("#formMain");
-    formMain.addEventListener("submit", (e) => {
-        e.preventDefault();
-        datos();
-    })
-}
-
-function datos() {
-
-    const nombreInput = document.getElementById('name');
-    const telefonoInput = document.getElementById('phone');
-    const emailInput = document.getElementById('email');
-
-    // Hacer que los 9 números esten juntos
-    const telefono = telefonoInput.value.replace(/\s/g, '');
-    const email = emailInput.value.trim();
-
-    const telefonoValido = objRegex.telefono.test(telefono);
-    const emailValido = objRegex.gmail.test(email);
-
-
-    if (nombreInput.value === '') alert('El nombre no debe estar vacio')
-
-    if (!telefonoValido) alert("El número de teléfono debe incluir 9 dígitos")
-
-    if (!emailValido) alert("Debe de ingresar un correo valido.")
-
-
-    if (nombreInput.value != '' && telefonoValido && emailValido) {
-        // alert("Todos los campos son correctos.")
-        modalContainer.style.display = 'none';
-        agarrandoDatos(nombreInput, telefonoInput, emailInput);
-        envioDatosWhatsApp(telefono);
-        enviarEmailAjax();
-        limpiarDatos(nombreInput, telefonoInput, emailInput);
-    }
-}
+      if (nombreInput.value != '' && telefonoValido && emailValido) {
+          // alert("Todos los campos son correctos.")
+          modalContainer.style.display = 'none';
+          agarrandoDatos(nombreInput, telefonoInput, emailInput);
+          envioDatosWhatsApp(telefono);
+          enviarEmailAjax();
+          limpiarDatos(nombreInput, telefonoInput, emailInput);
+      }
+  }
 
 function limpiarDatos(nombre, telefono, email) {
     nombre.value = "";
@@ -668,6 +677,58 @@ function enviarEmailAjax() {
         }
     })
 }
+</script>
+
+<!-- Plugin Boostrap Validator -->
+<script>
+    $(document).ready(function() {
+        $('#id-form').bootstrapValidator({
+            fields: {
+                name: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Este campo es obligatorio'
+                        },
+                        regexp: {
+                            regexp: /^[0-9]+$/,
+                            message: 'Este campo debe contener solo números'
+                        },
+                        stringLength: {
+                            min: 9,
+                            max: 10,
+                            message: 'Rango de 9-10'
+                        }
+                    }
+                },
+                phone: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Este campo es obligatorio'
+                        },
+                        regexp: {
+                            regexp: /^[0-9]+$/,
+                            message: 'Este campo debe contener solo números'
+                        },
+                        stringLength: {
+                            min: 3,
+                            max: 4,
+                            message: 'Rango de 3-4'
+                        }
+                    }
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Obligatorio*'
+                        },
+                        emailAddress: {
+                            message: 'Por favor, ingresa un correo electrónico válido'
+                        }
+                    }
+                }
+            }
+        });
+    });
 </script>
 
 
