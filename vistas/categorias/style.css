@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova:wght@400;700&display=swap');
 
-/* Estilos básicos y reset (R) */
+/* Estilos básicos y reset  */
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +8,12 @@
 
 }
 
-/* Fondo claro para un aspecto fresco y limpio (R) */
+/* Fondo claro para un aspecto fresco y limpio */
 body {
   background: #f2f2f2;
 }
 
-/* (R) */
+
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -24,7 +24,7 @@ body {
   }
 }
 
-/* (R)  Estilo para la galería de logos que se desliza automáticamente */
+/*  Estilo para la galería de logos que se desliza automáticamente */
 .logos {
   overflow: hidden;  
   padding-bottom: 0px;
@@ -33,7 +33,7 @@ body {
   position: relative;
 }
 
-/* (R) */
+
 .logos:before,
 .logos:after {
   position: absolute;
@@ -42,17 +42,16 @@ body {
   height: 100%;
   content: "";
   z-index: 2;
-  /* N */
   background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0)); 
 }
 
-/* R */
+
 .logos-slide {
   display: inline-block;
   animation: 35s slide infinite linear;
 }
 
-/* R */
+
 .logos-slide img {
   height: 360px;
   width: 650px;
@@ -62,7 +61,7 @@ body {
   margin-bottom: 35px;
 }
 
-/* (R) */
+
 .container-main {
   display: flex;
   align-items: center;
@@ -73,7 +72,7 @@ body {
   overflow: hidden;
 }
 
-/* (R) */
+
 .text1,
 .curvas,
 .text2 {
@@ -81,7 +80,7 @@ body {
   border: none;
 }
 
-/* (R) */
+
 .text1 {
   width: 50%;
   background-color: #1b4092;
@@ -94,7 +93,7 @@ body {
   padding: 15px;
 }
 
-/* (R) */
+
 /*SECCION PARA LAS PLABRAS DE BIENVENIDA */
 .welcom__item__titulo {
   color: white;
@@ -107,7 +106,7 @@ body {
   /* Ensure the text elements take the full width of their container */
 }
 
-/* (R) */
+
 /*SECCION PARA LAS PLABRAS DE BIENVENIDA */
 .welcom__item__text,
 .welcom__item__contacto,.welcom__item__titulo1 {
@@ -121,7 +120,7 @@ body {
   /* Ensure the text elements take the full width of their container */
 }
 
-/* (R) */
+
 .container-main .text1 .welcom__item__text {
   font-weight: normal; /* Hace que el texto sea más delgado */
   padding: 0 20px; /* Añadir padding horizontal para mejor formato del texto */
@@ -163,14 +162,14 @@ body {
   /* Utiliza todo el ancho posible */
 }
 
-/* (R) */
+
 .curvas {
   width: 15%;
   position: relative;
   overflow: hidden;
 }
 
-/* (R) */
+
 .curved-green,
 .curved-white {
   position: absolute;
@@ -198,7 +197,7 @@ body {
   z-index: 2;
 }
 
-/* (R) */
+
 .text2 {
   width: 35%;
   background-color: #fff;
@@ -208,7 +207,7 @@ body {
   justify-content: center;
 }
 
-/* (R) */
+
 .action-title {
   color: #005b96;
   /* Color del texto */
@@ -276,7 +275,7 @@ body {
 
 }
 
-/* (R) Cambio de 570 a 1110*/
+/* Cambio de 570 a 1110*/
 @media (max-width: 1110px) {
   .container-main {
     flex-direction: column;
@@ -329,7 +328,7 @@ body {
 }
 
 
-/* (R) */
+
 .action-button {
   background-color: #5db327;
   color: white;
@@ -351,7 +350,7 @@ body {
 }
 
 
-/* (R) */
+
 .action-button:hover {
   background-color: #37a456;
   transform: scale(1.05);
@@ -379,16 +378,16 @@ body {
 
 
 
-/* Estos estilos son de titulo e imagen de cada area o categoria de su pagina */
+/* Estos estilos son de titulo e imagen de cada area o categoria de cada pagina */
 
 @media screen and (min-width:1024px) {
+    /* Condicion para que termine el conflicto de la clase categeoria1__titulo, que se repiten en otros archivos con la misma clase*/
     h1.categoria1__titulo{
       font-family: 'Proxima-Nova-SemiBold';
       color: hsl(216deg, 85%, 34%);
       padding: .1px;
       font-size: 2rem;
       width: 95%;
-      /* margin: 2rem auto; */
       text-align: center;
 } 
  }
@@ -404,7 +403,7 @@ main{
 }
 
 
-/* Desde aca son otros estilos */
+/* Desde aca son estilos apartes */
 strong{
   color: black;
   font-weight: bolder;
