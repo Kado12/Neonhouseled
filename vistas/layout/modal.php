@@ -3,7 +3,7 @@
 <?php $categoria= $_SESSION['categoria'];
 ?>
 
-<div class="modal" id="modal">
+<div class="modal " id="modal"  style="display: none;">>
     <div class="contenedor activo" id="modal1">
     <button class="cerrar" id="cerrar">X</button>
         <div class="contenido">
@@ -462,12 +462,12 @@
     });
 </script> -->
 
-<!-- FORM VALIDATION-->
+<!-- FORM-->
 <script>
+  //VALIDACIÓN
   const formulario=document.querySelector('#formulario');
   const inputs = document.querySelectorAll('#formulario input[type="text"], input[type="tel"], input[type="email"]');
   const modalContainer = document.querySelector('#modal')
-
   const expresiones = {
 	  nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
   	telefono: /^9\d{8}$/,
@@ -478,6 +478,11 @@
     nombre:false,
     phone:false,
     email:false
+  }
+  const user={
+    nombre:"",
+    phone:"",
+    email:""
   }
   const validarFormulario=(e)=>{
       switch(e.target.name){
@@ -499,6 +504,7 @@
       document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
       document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
       document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+      user[campo]=input.value;
       campos[campo]=true;
     }else{
       document.querySelector(`#grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
@@ -518,28 +524,42 @@
   formulario.addEventListener('submit',(e)=>{
       e.preventDefault();
       if(campos.nombre && campos.phone && campos.email){
-        formulario.reset();
-        document.querySelectorAll('.formulario__grupo-correcto').forEach((icono)=>{
-          icono.classList.remove('formulario__grupo-correcto');
-        });
-        modalContainer.style.display = 'none';
-
-        // agarrandoDatos(nombreInput, telefonoInput, emailInput);
+          let form=formateoDatos(user.nombre, user.phone, user.email);
+          formulario.reset();
+          modalContainer.style.display = 'none';
+          document.querySelectorAll('.formulario__grupo-correcto').forEach((icono)=>{
+            icono.classList.remove('formulario__grupo-correcto');
+          });          
         //     envioDatosWhatsApp(telefono);
-        //     enviarEmailAjax();
-        //     limpiarDatos(nombreInput, telefonoInput, emailInput);
+        //enviandoDatosServer(form);
+        sendEmailAjax(form);
       }
   })
-  
-
-function agarrandoDatos(nombre, telefono, email) {
-    const form = new FormData();
-    form.append('nombre', nombre.value)
-    form.append('telefono', telefono.value)
-    form.append('email', email.value)
-
-    enviandoDatosServer(form)
+  function sendEmailAjax(form) {
+    $.ajax({
+        method: "POST",
+        url: "/controladores/sendEmail.php", 
+        data: form,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(response) {
+            console.log("Respuesta recibida:", response);
+        },
+        error: function(xhr, status, error) {
+            console.error("Ocurrió un error:", error);
+        }
+    });
 }
+
+  
+  //Preparando los datos
+  function formateoDatos(nombre, telefono, email) {
+      const form = new FormData();
+      form.append('name', nombre);
+      form.append('email', email);
+      return form;
+  }
 
 //Enviando datos al servidor:
 function enviandoDatosServer(form) {
@@ -663,43 +683,6 @@ window.onload = function() {
     }
 };
 
-
-
-
-
-
-function enviarEmailAjax() {
-    var queryString = window.location.search;
-    var parametros = new URLSearchParams(queryString);
-    const id_ser = parametros.get('id');
-
-    const email = document.getElementById('email').value;
-
-
-    var datos = new FormData();
-    datos.append("id_ser", id_ser);
-    datos.append("email", email);
-
-
-
-    $.ajax({
-        url: "./public/message/Controller/process.php",
-        method: "POST",
-        data: datos,
-        cache: false,
-        contentType: false,
-        processData: false,
-        success: function(respuesta) {
-            console.log("Respuesta", respuesta);
-            if (respuesta.trim().toLowerCase() === "correctocorrectocorrecto") {
-                alert("Email Enviado");
-
-            } else {
-                alert("ocurrio un error " + respuesta);
-            }
-        }
-    })
-}
 </script>
 
 
