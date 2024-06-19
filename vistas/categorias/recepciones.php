@@ -122,7 +122,7 @@ $_SESSION['imagen'] = 'RECEPCIONES.jpg';
         </div>
         <h2 class="welcom__item__titulo">SI TU RECEPCIÓN NO REFLEJA LA IDENTIDAD Y LOS VALORES DE TU EMPRESA</h2>
         <h3 class="welcom__item__text">EN NHL, ENTENDEMOS LA IMPORTANCIA DE UNA PRIMERA IMPRESIÓN POSITIVA</h3>
-        <h3 class="welcom__item__contacto">¡¡DISEÑAMOS TU RECEPCIÓN CON LO MEJOR PARA TI, PERSONALIZANDO TU ESPACIO, Y FORTALECIENDO RELACIONES CON TUS CLIENTES Y SOCIOS COMERCIALES!!</h3>
+        <h3 class="welcom__item__contacto">DISEÑAMOS TU RECEPCIÓN CON LO MEJOR PARA TI, PERSONALIZANDO TU ESPACIO, Y FORTALECIENDO RELACIONES CON TUS CLIENTES Y SOCIOS COMERCIALES</h3>
     </div>
     <div class="curvas">
         <section class="curved-green"></section>

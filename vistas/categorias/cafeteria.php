@@ -123,8 +123,8 @@ $_SESSION['imagen'] = 'CAFETERIA Y JUGUERIA.jpg';
     <div class="text1">
         <div class="logo-nhl">
         </div>
-        <h2 class="welcom__item__titulo">SI SIENTES QUE TU CAFETERÍA O JUGUERÍA CARECE DE UN AMBIENTE ACOGEDOR Y ATRACTIVO PARA TUS CLIENTES </h2>
-        <h3 class="welcom__item__text">PERMÍTENOS TRANSFORMARLO EN UN ESPACIO QUE LOS CAUTIVE</h3>
+        <h2 class="welcom__item__titulo">SI SIENTES QUE TU CAFETERÍA O JUGUERÍA CARECE DE UN AMBIENTE ATRACTIVO PARA TUS CLIENTES </h2>
+        <h3 class="welcom__item__text">PERMÍTENOS TRANSFORMARLO EN UN ESPACIO QUE LOS CAUTIVE. CON NUESTRA EXPERIENCIA EN DISEÑO DE INTERIORES Y DECORACIÓN, CREAREMOS UN ENTORNO QUE INVITE A RELAJARSE Y DISFRUTAR, AUMENTANDO LA FIDELIDAD Y SATISFACCIÓN DE TUS CLIENTE</h3>
         <h3 class="welcom__item__contacto">¡¡NO ESPERES MÁS Y CONTRATA NUESTROS SERVICIOS!!</h3>
     </div>
     <div class="curvas">
