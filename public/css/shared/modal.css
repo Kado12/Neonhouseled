@@ -1,6 +1,10 @@
 .activo{
     display: block;
 }
+#modal1 {
+    transform: translate(0%, 5%) !important;
+}
+
 .inactivo{
     display: none;
 }
@@ -102,7 +106,6 @@
     color: white;
     background-color: #3a4fd0;
     box-shadow: 0 0 4px 1px #888;
-    border: none;
     border-radius: 0.4rem;
 }
 .derecha .form-registro input::placeholder{

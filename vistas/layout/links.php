@@ -4,12 +4,17 @@
      
     <link rel="preload" href="https://cdn.rawgit.com/mistic100/Photo-Sphere-Viewer/3.1.0/dist/photo-sphere-viewer.min.css" as="font">
      
+     <!-- CDN Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <link rel="shortcut icon" href="../../ico.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../public/css/shared/header.css">
     <link rel="stylesheet" href="../../public/css/shared/footer.css">
     <link rel="stylesheet" href="../../public/css/shared/modal.css">
     <link rel="stylesheet" href="../../public/css/shared/categoria.css">  
     <link rel="stylesheet" href="../../public/css/shared/restaurante.css">   
+    <link rel="stylesheet" href="../../public/css/shared/formulario.css">   
 
     <style>
         #photosphere { height:410px; width:100%; margin: 0 auto; }

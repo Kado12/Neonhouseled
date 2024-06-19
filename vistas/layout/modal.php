@@ -3,7 +3,7 @@
 <?php $categoria= $_SESSION['categoria'];
 ?>
 
-<div class="modal" id="modal" style="display: none;">
+<div class="modal" id="modal">
     <div class="contenedor activo" id="modal1">
     <button class="cerrar" id="cerrar">X</button>
         <div class="contenido">
@@ -156,21 +156,33 @@
                         ?>
                         
                         
-                <form action="" method="POST" id="id-form">
+                <form action="" method="POST" class="formulario" id="formulario">
                     <input type="hidden" name="servicio" value="<?php echo $_SESSION['servicio'] ?>">
                     <input type="hidden" name="categoria" value="<?php echo $_SESSION['categoria'] ?>">
+                  
                     
-                    <div class="form-registro form-group" >
-                        
-                        <input type="text" name="name" placeholder="Nombre" id="name" required>
+                    <div class="form-registro  " id="grupo__nombre">
+                         <div class="formulario__grupo-input">
+                            <input type="text" class="formulario__input" name="name" placeholder="Nombre" id="name">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                            <p class="formulario__input-error">Por favor, introduce un nombre válido utilizando solo letras.</p>
+                          </div>
                     </div>
-                    <div class="form-registro form-group">
-                        
-                        <input type="tel" name="phone" placeholder="Teléfono" id="phone" required>
+
+                    <div class="form-registro formulario__grupo" id="grupo__phone">
+                          <div class="formulario__grupo-input">
+                          <input type="tel" class="formulario__input" name="phone" placeholder="Teléfono" id="phone">
+                          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                          <p class="formulario__input-error">Número inválido: debe empezar con 9 y tener 9 dígitos.</p>
+                          </div>
                     </div>
-                    <div class="form-registro form-group">
-                        
-                        <input type="email" name="email" placeholder="Email" id="email" required><br>
+                    <div class="form-registro formulario__grupo" id="grupo__email">
+                        <div class="formulario__grupo-input">
+                          <input type="email" class="formulario__input" name="email" placeholder="Email" id="email"><br>
+                          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                          <p class="formulario__input-error">Por favor, introduce una dirección de correo electrónico válida.</p>
+                          </div>    
+
                     </div>
                     <div class="form-button">
                         <?php 
@@ -350,24 +362,13 @@
 
  <!-- Librerias -->
  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
- <script
-			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.0/js/bootstrapValidator.js"></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-			crossorigin="anonymous"></script>
 
-<style>
-    #modal1 {
-        transform: translate(0%, 5%) !important;
-    }
-</style>
 
 <!--Script para ejecutar funciones -->
 <script>
   document.addEventListener('DOMContentLoaded',function(){
     mostrarModalDespuesDe30Segundos();
-    submitForm();
+    // submitForm();
   })
 </script>
 
@@ -382,7 +383,6 @@
     }
 
     // const btnCerrar = document.querySelector('.btn-cerrar');
-// const modalContainer = document.querySelector('.modal-main-background')
  
 
 // document.addEventListener("DOMContentLoaded", mostrarModalDespuesDe5Segundos);
@@ -462,52 +462,75 @@
     });
 </script> -->
 
-<!-- FORM -->
+<!-- FORM VALIDATION-->
 <script>
-  const objRegex = {
-     telefono: /^9\d{2}\d{3}\d{3}$/, //validar que tenga 9 caracteres y que esten todos juntos
-     gmail: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
-};
-  // Submit
-  function submitForm() {
-      const formMain = document.querySelector("#id-form");
-      formMain.addEventListener("submit", (e) => {
-          e.preventDefault();
-          // validateData();
-      })
+  const formulario=document.querySelector('#formulario');
+  const inputs = document.querySelectorAll('#formulario input[type="text"], input[type="tel"], input[type="email"]');
+  const modalContainer = document.querySelector('#modal')
+
+  const expresiones = {
+	  nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
+  	telefono: /^9\d{8}$/,
+    correo: /^[\w\.-]+@(gmail|outlook|hotmail|ucsm|senati)\.(com|edu.pe|pe)$/ //validar la estructura de un correo electrónico
+  };
+
+  const campos={
+    nombre:false,
+    phone:false,
+    email:false
   }
-  //Validamos los datos 
-  function validateData() {
-      const nombreInput = document.getElementById('name').value;
-      const telefonoInput = document.getElementById('phone').value;
-      const emailInput = document.getElementById('email').value;
-
-      // Validamos ??
-      const telefono = telefonoInput.replace(/\s/g, '');
-
-      const email = emailInput.trim();
-      const telefonoValido = objRegex.telefono.test(telefono);
-      const emailValido = objRegex.gmail.test(email);
-
-      if (nombreInput.value === '') alert('El nombre no debe estar vacio')
-      if (!telefonoValido) alert("El número de teléfono debe incluir 9 dígitos")
-      if (!emailValido) alert("Debe de ingresar un correo valido.")
-
-      if (nombreInput.value != '' && telefonoValido && emailValido) {
-          // alert("Todos los campos son correctos.")
-          modalContainer.style.display = 'none';
-          agarrandoDatos(nombreInput, telefonoInput, emailInput);
-          envioDatosWhatsApp(telefono);
-          enviarEmailAjax();
-          limpiarDatos(nombreInput, telefonoInput, emailInput);
+  const validarFormulario=(e)=>{
+      switch(e.target.name){
+        case "name":
+          validarCampo(expresiones.nombre,e.target,'nombre');
+        break;
+        case "phone":
+          validarCampo(expresiones.telefono,e.target,'phone');
+        break;
+        case "email":
+          validarCampo(expresiones.correo,e.target,'email');
+        break;
       }
   }
+  const validarCampo=(expresion,input,campo)=>{
+    if(expresion.test(input.value)){
+      document.querySelector(`#grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
+      document.querySelector(`#grupo__${campo}`).classList.add('formulario__grupo-correcto');
+      document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
+      document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
+      document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+      campos[campo]=true;
+    }else{
+      document.querySelector(`#grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
+      document.querySelector(`#grupo__${campo}`).classList.remove('formulario__grupo-correcto');
+      document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle')
+      document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle')
+      document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
+      campos[campo]=false;
+    }
+  }
 
-function limpiarDatos(nombre, telefono, email) {
-    nombre.value = "";
-    telefono.value = "";
-    email.value = "";
-}
+  inputs.forEach((input)=>{
+      input.addEventListener('keyup',validarFormulario);
+      input.addEventListener('blur',validarFormulario);
+  });
+  
+  formulario.addEventListener('submit',(e)=>{
+      e.preventDefault();
+      if(campos.nombre && campos.phone && campos.email){
+        formulario.reset();
+        document.querySelectorAll('.formulario__grupo-correcto').forEach((icono)=>{
+          icono.classList.remove('formulario__grupo-correcto');
+        });
+        modalContainer.style.display = 'none';
+
+        // agarrandoDatos(nombreInput, telefonoInput, emailInput);
+        //     envioDatosWhatsApp(telefono);
+        //     enviarEmailAjax();
+        //     limpiarDatos(nombreInput, telefonoInput, emailInput);
+      }
+  })
+  
 
 function agarrandoDatos(nombre, telefono, email) {
     const form = new FormData();
@@ -601,22 +624,22 @@ function envioDatosWhatsApp(num) {
 }
 
 
-// Evento para controlar el envío del formulario
-document.getElementById('formMain').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evitar el envío del formulario por defecto
+// // Evento para controlar el envío del formulario
+// document.getElementById('formMain').addEventListener('submit', function(event) {
+//     event.preventDefault(); // Evitar el envío del formulario por defecto
 
-    // Verificar si hay mensajes pendientes en el localStorage
-    const storedData = obtenerDatosDelLocalStorage();
-    const sentMessages = storedData ? storedData.sentMessages || [] : [];
+//     // Verificar si hay mensajes pendientes en el localStorage
+//     const storedData = obtenerDatosDelLocalStorage();
+//     const sentMessages = storedData ? storedData.sentMessages || [] : [];
 
-    if (sentMessages.length >= 1 && sentMessages.length < 3) {
-        alert("Debes esperar a que se completen los mensajes de WhatsApp antes de enviar otro formulario.");
-        return;
-    }
+//     if (sentMessages.length >= 1 && sentMessages.length < 3) {
+//         alert("Debes esperar a que se completen los mensajes de WhatsApp antes de enviar otro formulario.");
+//         return;
+//     }
 
-    // Si no hay mensajes pendientes, permitir el envío del formulario
-    submit();
-});
+//     // Si no hay mensajes pendientes, permitir el envío del formulario
+//     submit();
+// });
 
 
 
@@ -679,57 +702,7 @@ function enviarEmailAjax() {
 }
 </script>
 
-<!-- Plugin Boostrap Validator -->
-<script>
-    $(document).ready(function() {
-        $('#id-form').bootstrapValidator({
-            fields: {
-                name: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Este campo es obligatorio'
-                        },
-                        regexp: {
-                            regexp: /^[0-9]+$/,
-                            message: 'Este campo debe contener solo números'
-                        },
-                        stringLength: {
-                            min: 9,
-                            max: 10,
-                            message: 'Rango de 9-10'
-                        }
-                    }
-                },
-                phone: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Este campo es obligatorio'
-                        },
-                        regexp: {
-                            regexp: /^[0-9]+$/,
-                            message: 'Este campo debe contener solo números'
-                        },
-                        stringLength: {
-                            min: 3,
-                            max: 4,
-                            message: 'Rango de 3-4'
-                        }
-                    }
-                },
-                email: {
-                    validators: {
-                        notEmpty: {
-                            message: 'Obligatorio*'
-                        },
-                        emailAddress: {
-                            message: 'Por favor, ingresa un correo electrónico válido'
-                        }
-                    }
-                }
-            }
-        });
-    });
-</script>
+
 
 
 <?php session_destroy(); ?>
