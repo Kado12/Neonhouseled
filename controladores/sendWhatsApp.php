@@ -1,12 +1,14 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $telefono = $_POST["phone"];
+    $categoria=strtolower($_POST["categoria"]);
+
     $params = array(
         'token' => 'qnu43pihdrv0z0z2',
         'to' => '+51'.$telefono,
         'body' => "*Hola, somos la empresa NeonHouseLED.*\n\n" .
-                  "Le escribimos porque ha completado nuestro formulario y estamos interesados en hablarle sobre su interés en nuestros productos y servicios. ¿Podemos agendar una llamada o reunión para discutir más detalles?\n\n" .
-                  "Quedamos a la espera de su respuesta. ¡Gracias!"
+              "Le escribimos porque ha completado nuestro formulario y vemos que quiere diseñar o darle un espíritu nuevo a su ".$categoria.". ¿Podemos agendar una llamada o reunión para discutir más detalles?\n\n" .
+              "Quedamos a la espera de su respuesta. ¡Gracias!"
     );
     
     $curl = curl_init();

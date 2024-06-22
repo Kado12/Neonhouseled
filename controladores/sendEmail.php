@@ -1,29 +1,37 @@
 <?php
 
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
+
+// require '../public/PHPMailer/src/Exception.php';
+// require '../public/PHPMailer/src/PHPMailer.php';
+// require '../public/PHPMailer/src/SMTP.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '../public/PHPMailer/src/Exception.php';
-require '../public/PHPMailer/src/PHPMailer.php';
-require '../public/PHPMailer/src/SMTP.php';
+require '..\public\phpMailer\src\Exception.php';
+require '..\public\phpMailer\src\PHPMailer.php';
+require '..\public\phpMailer\src\SMTP.php';
+
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nombre = $_POST["name"];
     $email = $_POST["email"];
-
+    $categoria=strtolower($_POST["categoria"]);
     $mail = new PHPMailer(true);
     // Configuración del servidor SMTP y credenciales
     $mail->isSMTP();
     $mail->CharSet = 'UTF-8';
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'diego.bautistamlp@gmail.com';
-    $mail->Password = 'ildf eukw elwa mhrd';
+    $mail->Username = 'digi.mediamkt@gmail.com';
+    $mail->Password = 'bjgcnkfhrulmvsjt'; //NECESITO LA CLAVE
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
     // Configuración del remitente y destinatario
-    $mail->setFrom('diego.bautistamlp@gmail.com');
+    $mail->setFrom('digi.mediamkt@gmail.com');
     $mail->addAddress($email);
 
     // Configuración del contenido del correo
@@ -149,7 +157,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                                                                 </tr>
                                                                                 <tr>
                                                                                     <td class="esd-block-text es-m-txt-c es-p15t" align="center">
-                                                                                        <p>Hemos recibido tu interés en diseñar tu negocio. Nos pondremos en contacto contigo por WhatsApp en breve. Si no recibes nuestra respuesta, por favor responde este mensaje o llama al <span style="color: #3982b8;">+51 954368018</span> para asistencia inmediata.</p>
+                                                                                        <p>Hemos recibido tu interés en diseñar tu '.$categoria.'.Nos pondremos en contacto contigo por WhatsApp en breve. Si no recibes nuestra respuesta, por favor responde este mensaje o llama al <span style="color: #3982b8;">+51 954368018</span> para asistencia inmediata.</p>
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>

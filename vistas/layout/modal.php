@@ -522,9 +522,9 @@
   
   formulario.addEventListener('submit',(e)=>{
       e.preventDefault();
-      messageError();
       if(campos.nombre && campos.phone && campos.email){
-          let form=formateoDatos(user.nombre, user.phone, user.email);
+          let categoria =<?php echo json_encode($categoria); ?>;
+          let form=formateoDatos(user.nombre, user.phone, user.email,categoria);
           formulario.reset();
           modalContainer.style.display = 'none';
           document.querySelectorAll('.formulario__grupo-correcto').forEach((icono)=>{
@@ -536,11 +536,16 @@
       }
   })
     //Preparando los datos
-  function formateoDatos(nombre, telefono, email) {
+  function formateoDatos(nombre, telefono, email,categoria) {
     const form = new FormData();
     form.append('name', nombre);
     form.append('phone', telefono);
     form.append('email', email);
+    if(categoria===null || categoria===""){
+      form.append('categoria',"negocio");
+    }else{
+      form.append('categoria',categoria);      
+    }
     return form;
   }
 
@@ -555,6 +560,7 @@
         success: function(response) {
         },
         error: function(xhr, status, error) {
+          messageError();
         }
     });
 }
@@ -570,6 +576,7 @@ function envioDatosWhatsApp(form){
         success: function(response) {
         },
         error: function(xhr, status, error) {
+          messageError();
         }
     });
 }
