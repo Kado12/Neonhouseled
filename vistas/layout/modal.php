@@ -530,8 +530,8 @@
           document.querySelectorAll('.formulario__grupo-correcto').forEach((icono)=>{
             icono.classList.remove('formulario__grupo-correcto');
           });          
-        envioDatosWhatsApp(form);
         sendEmailAjax(form);
+        envioDatosWhatsApp(form);
         messageCorrect();
       }
   })
@@ -558,8 +558,11 @@
         contentType: false,
         processData: false,
         success: function(response) {
+          console.log("Correo enviado exitosamente");
         },
         error: function(xhr, status, error) {
+          console.error("Error al enviar el correo:", status, error);
+          console.error("Detalles:", xhr.responseText);
           messageError();
         }
     });

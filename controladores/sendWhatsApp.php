@@ -3,6 +3,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $telefono = $_POST["phone"];
     $categoria=strtolower($_POST["categoria"]);
 
+      //parametros que te da ultramsg
+      //crear cuenta
     $params = array(
         'token' => 'qnu43pihdrv0z0z2',
         'to' => '+51'.$telefono,
