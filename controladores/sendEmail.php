@@ -1,43 +1,38 @@
 <?php
 
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\Exception;
-
-// require '../public/PHPMailer/src/Exception.php';
-// require '../public/PHPMailer/src/PHPMailer.php';
-// require '../public/PHPMailer/src/SMTP.php';
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '..\public\phpMailer\src\Exception.php';
-require '..\public\phpMailer\src\PHPMailer.php';
-require '..\public\phpMailer\src\SMTP.php';
-
+require '../public/PHPMailer/src/Exception.php';
+require '../public/PHPMailer/src/PHPMailer.php';
+require '../public/PHPMailer/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nombre = $_POST["name"];
     $email = $_POST["email"];
-    $categoria=strtolower($_POST["categoria"]);
+    $categoria = strtolower($_POST["categoria"]);
+
     $mail = new PHPMailer(true);
-    // Configuración del servidor SMTP y credenciales
-    $mail->isSMTP();
-    $mail->CharSet = 'UTF-8';
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'digi.mediamkt@gmail.com';
-    $mail->Password = 'bjgcnkfhrulmvsjt'; //NECESITO LA CLAVE
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
+    
+    try {
+        // Configuración del servidor SMTP y credenciales
+        $mail->isSMTP();
+        $mail->CharSet = 'UTF-8';
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'digi.mediamkt@gmail.com';
+        $mail->Password = 'bjgcnkfhrulmvsjt'; //NECESITO LA CLAVE
+        $mail->SMTPSecure = 'ssl';
+        $mail->Port = 465;
 
-    // Configuración del remitente y destinatario
-    $mail->setFrom('digi.mediamkt@gmail.com');
-    $mail->addAddress($email);
+        // Configuración del remitente y destinatario
+        $mail->setFrom('digi.mediamkt@gmail.com');
+        $mail->addAddress($email);
 
-    // Configuración del contenido del correo
-    $mail->isHTML(true);
-    $mail->Subject = 'comunicacion';
-    $mail->Body ='<!DOCTYPE html>
+        // Configuración del contenido del correo
+        $mail->isHTML(true);
+        $mail->Subject = 'comunicacion';
+        $mail->Body = '<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -239,9 +234,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div style="position: absolute; left: -9999px; top: -9999px; margin: 0px;"></div>
 </body>
 
-</html>';
-    // Enviar el correo
-    $mail->send();
-;
+</html>'; // Aquí va el contenido HTML del correo
+
+        // Enviar el correo
+        $mail->send();
+        echo "Correo enviado exitosamente";
+    } catch (Exception $e) {
+        http_response_code(500);
+        error_log("Error al enviar el correo: {$mail->ErrorInfo}");
+        echo "Error al enviar el correo: {$mail->ErrorInfo}";
+    }
 }
 ?>
