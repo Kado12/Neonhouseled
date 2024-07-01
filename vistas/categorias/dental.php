@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['categoria'] = 'CLÍNICA DENTAL';
+$_SESSION['info'] = 'dental';
 $_SESSION['imagen'] = 'CLINICA DENTAL.jpg';
 ?>
 

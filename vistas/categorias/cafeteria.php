@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['categoria'] = 'CAFETERÍA Y JUGUERÍA';
+$_SESSION['info'] = 'cafeteria';
 $_SESSION['imagen'] = 'CAFETERIA Y JUGUERIA.jpg';
 ?>
 

@@ -1,11 +1,9 @@
 <?php session_start(); ?>
 
-<?php $categoria = $_SESSION['categoria'];
-$reemplazos = array(
-  'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
-  'Á' => 'A', 'É' => 'E', 'Í' => 'I', 'Ó' => 'O', 'Ú' => 'U'
-);
-$cat = strtolower(strtr($categoria, $reemplazos));
+<?php 
+$categoria = $_SESSION['info'];
+$servicio = $_SESSION['servicio'];
+$title = $_SESSION['categoria'];
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +20,7 @@ $cat = strtolower(strtr($categoria, $reemplazos));
 </head>
 <style>
   .portada {
-    background-image: url(../../public/imagenes/galeria-imagenes/<?php echo $cat;?>/4.webp)
+    background-image: url(../../public/imagenes/Pagina-Extra/<?php echo $categoria;?>/<?php echo $categoria.'_01';?>.jpg)
   }
 </style>
 
@@ -33,7 +31,7 @@ $cat = strtolower(strtr($categoria, $reemplazos));
     <div class="portada">
       <div class="portada__contenido">
         <p class="portada__parr">
-          <?php echo $categoria ?>
+          <?php echo $title.$servicio ?>
         </p>
       </div>
     </div>
@@ -192,10 +190,10 @@ $cat = strtolower(strtr($categoria, $reemplazos));
 
     </div>
     <div class="collage">
-        <img loading="lazy" width="160" height="150" src="../../public/imagenes/galeria-imagenes/<?php echo $cat ?>/1.webp" alt="imagen 1">
-        <img loading="lazy" width="160" height="150" src="../../public/imagenes/galeria-imagenes/<?php echo $cat ?>/2.webp" alt="imagen 2">
-        <img loading="lazy" width="160" height="150" src="../../public/imagenes/galeria-imagenes/<?php echo $cat ?>/3.webp" alt="imagen 3">
-        <img loading="lazy" width="160" height="150" src="../../public/imagenes/galeria-imagenes/<?php echo $cat ?>/5.webp" alt="imagen 4">
+        <img loading="lazy" width="160" height="150" src="../../public/imagenes/Pagina-Extra/<?php echo $categoria;?>/<?php echo $categoria.'_02';?>.jpg" alt="imagen 1">
+        <img loading="lazy" width="160" height="150" src="../../public/imagenes/Pagina-Extra/<?php echo $categoria;?>/<?php echo $categoria.'_03';?>.jpg" alt="imagen 2">
+        <img loading="lazy" width="160" height="150" src="../../public/imagenes/Pagina-Extra/<?php echo $categoria;?>/<?php echo $categoria.'_04';?>.jpg" alt="imagen 3">
+        <img loading="lazy" width="160" height="150" src="../../public/imagenes/Pagina-Extra/<?php echo $categoria;?>/<?php echo $categoria.'_01';?>.jpg" alt="imagen 4">
     </div>
   </div>
 

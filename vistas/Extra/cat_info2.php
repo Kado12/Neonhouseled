@@ -1,12 +1,10 @@
 <?php session_start(); ?>
 
-<?php $categoria = $_SESSION['categoria'];
-$reemplazos = array(
-  'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
-  'Á' => 'A', 'É' => 'E', 'Í' => 'I', 'Ó' => 'O', 'Ú' => 'U'
-);
-$cat = strtolower(strtr($categoria, $reemplazos));
+<?php 
+$categoria = $_SESSION['info'];
+$title = $_SESSION['categoria'];
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,13 +26,13 @@ $cat = strtolower(strtr($categoria, $reemplazos));
             <div class="slider true">
                 <div class="slide">
                     <div class="info">
-                    <img loading="lazy" src="../../public/imagenes/galeria-imagenes/<?php echo $cat ?>/1.webp" alt="imagen 1">
+                    <img loading="lazy" src="../../public/imagenes/Pagina-Extra/<?php echo $categoria;?>/<?php echo $categoria.'_01';?>.jpg" alt="imagen 1">
                         <div class="info__conte info__conte-format">
                             <p class="info__conte-tittle">TU MEJOR AVENTURA
                             COMIENZA AQUÍ</p>
                             <p class="info__conte-parr">
                             <?php
-                                switch ($categoria) {
+                                switch ($title) {
                                 case "BAR":
                                 ?>
                                     "Descubre cómo nuestros diseños de interiores para bares fusionan la calidez del ambiente con la sofisticación del  diseño contemporáneo."                                
@@ -179,13 +177,13 @@ $cat = strtolower(strtr($categoria, $reemplazos));
                                 ?>
                             </p>
                         </div>
-                        <img loading="lazy" src="../../public/imagenes/galeria-imagenes/<?php echo $cat ?>/2.webp" alt="imagen 1">
+                        <img loading="lazy" src="../../public/imagenes/Pagina-Extra/<?php echo $categoria;?>/<?php echo $categoria.'_02';?>.jpg" alt="imagen 1">
 
                         <div class="info__conte1 info__conte-format">
                             <p class="info__conte-tittle">CONSTRUYENDO TU FUTURO</p>
                             <p class="info__conte-parr">
                             <?php
-                                switch ($categoria) {
+                                switch ($title) {
                                 case "BAR":
                                 ?>
                                     "Deléitate con la armonía de texturas, colores y formas en nuestros diseños de interiores para bares, diseñados para estimular los sentidos y la conversación."
@@ -336,13 +334,13 @@ $cat = strtolower(strtr($categoria, $reemplazos));
                 </div>
                 <div class="slide">
                 <div class="info">
-                <img loading="lazy" src="../../public/imagenes/galeria-imagenes/<?php echo $cat ?>/3.webp" alt="imagen 1">
+                <img loading="lazy" src="../../public/imagenes/Pagina-Extra/<?php echo $categoria;?>/<?php echo $categoria.'_03';?>.jpg" alt="imagen 1">
 
                         <div class="info__conte info__conte-format">
                             <p class="info__conte-tittle">HACEMOS DE LO IMPOSIBLE, ALGO SIMPLE</p>
                             <p class="info__conte-parr">
                             <?php
-                                switch ($categoria) {
+                                switch ($title) {
                                 case "BAR":
                                 ?>
                                     "Sumérgete en un universo de elegancia y estilo con nuestros diseños de interiores para bares, donde cada espacio cuenta una historia diferente."
@@ -487,13 +485,13 @@ $cat = strtolower(strtr($categoria, $reemplazos));
                                 ?>
                             </p>
                         </div>
-                        <img loading="lazy" src="../../public/imagenes/galeria-imagenes/<?php echo $cat ?>/5.webp" alt="imagen 1">
+                        <img loading="lazy" src="../../public/imagenes/Pagina-Extra/<?php echo $categoria;?>/<?php echo $categoria.'_04';?>.jpg" alt="imagen 1">
 
                         <div class="info__conte1 info__conte-format">
                             <p class="info__conte-tittle">SOÑANDO EN GRANDE</p>
                             <p class="info__conte-parr">
                             <?php
-                                switch ($categoria) {
+                                switch ($title) {
                                 case "BAR":
                                 ?>
                                     "Explora la fusión perfecta entre lo clásico y lo contemporáneo en nuestros diseños de interiores para bares, donde la tradición se encuentra con la innovación."

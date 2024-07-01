@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['categoria'] = 'SALÓN DE BELLEZA Y BARBERÍA';
+$_SESSION['info'] = 'belleza';
 $_SESSION['imagen'] = 'SALON BELLEZA Y BARBERIA.webp';
 ?>
 

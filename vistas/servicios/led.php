@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['servicio'] = 'PANELES LED';
+$_SESSION['info'] = 'led';
 $_SESSION['imagen'] = 'LED.webp';
 ?>
 

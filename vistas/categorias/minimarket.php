@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['categoria'] = 'MINIMARKET';
+$_SESSION['info'] = 'minimarket';
 $_SESSION['imagen'] = 'MINIMARKET.jpg';
 ?>
 

@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['categoria'] = 'FUENTE DE SODA';
+$_SESSION['info'] = 'soda';
 $_SESSION['imagen'] = 'FUENTE DE SODA.jpg';
 ?>
 

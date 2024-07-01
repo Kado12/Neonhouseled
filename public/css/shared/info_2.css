@@ -71,9 +71,9 @@
     .info__conte-parr{
         margin-top: 15px;
     }
-    .slider-container .slide img{
-        width: 90%;
-        height: 70%;
+    .slider-container img{
+        width: 350px;
+        height: 200px;
     }
     @media (max-width: 480px) {
         .arrow {
@@ -101,8 +101,17 @@
         }
     }
     @media (min-width: 842px) {
-        .slider-container .slide img{
-            width: 90%;
-            height: 95%;
+        .slider-container  img{
+            width: 350px;
+            height: 180px;
+        }
+    }
+    @media (min-width: 960px) {
+        .slider-container  img{
+            width: 450px;
+            height: 280px;
+        }
+        .info__conte-format{
+            padding: 15px 5px 0 60px;
         }
     }

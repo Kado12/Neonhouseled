@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['categoria'] = 'ESTILO INDUSTRIAL';
+$_SESSION['info'] = 'industrial';
 $_SESSION['imagen'] = 'ESTILO INDUSTRIAL.jpeg';
 ?>
 
