@@ -3,6 +3,7 @@
 <?php $categoria = $_SESSION['categoria'];
 ?>
 
+
 <div class="modal " id="modal"  style="display: none;">>
     <div class="contenedor activo" id="modal1">
     <button class="cerrar" id="cerrar">X</button>
@@ -533,6 +534,7 @@
         envioDatosWhatsApp(form);
         sendEmailAjax(form);
         messageCorrect();
+        window.location.href = "/vistas/Extra/cat_info.php";
       }
   })
     //Preparando los datos
@@ -744,4 +746,3 @@ const messageCorrect =()=>{
 // };
 
 // </script>
-<?php session_destroy(); ?>
