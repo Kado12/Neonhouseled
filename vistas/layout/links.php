@@ -17,6 +17,8 @@
 <link rel="stylesheet" href="../../public/css/shared/modal.css">
 <link rel="stylesheet" href="../../public/css/shared/categoria.css">
 <link rel="stylesheet" href="../../public/css/shared/formulario.css">
+<link rel="stylesheet" href="../../public/css/shared/info.css">
+<link rel="stylesheet" href="../../public/css/shared/info_2.css">
 
 <style>
     #photosphere {
