@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['servicio'] = 'LETREROS LUMINOSOS';
+$_SESSION['info'] = 'luminosos';
 $_SESSION['imagen'] = 'LUMINOSO.webp';
 ?>
 

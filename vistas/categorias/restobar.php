@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['categoria'] = 'RESTOBAR';
+$_SESSION['info'] = 'restobar';
 $_SESSION['imagen'] = 'RESTOBAR.jpg';
 ?>
 

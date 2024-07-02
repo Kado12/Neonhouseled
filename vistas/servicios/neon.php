@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['servicio'] = 'FABRICACIÓN NEÓN';
+$_SESSION['info'] = 'neon';
 $_SESSION['imagen'] = 'NEON.webp';
 ?>
 

@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['servicio'] = 'FABRICACIÓN MOBILIARIA';
+$_SESSION['info'] = 'mobiliaria';
 $_SESSION['imagen'] = 'MOBILIARIA.webp';
 ?>
 

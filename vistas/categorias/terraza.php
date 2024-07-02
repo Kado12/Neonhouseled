@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['categoria'] = 'TERRAZA';
+$_SESSION['info'] = 'terraza';
 $_SESSION['imagen'] = 'TERRAZA.webp';
 ?>
 
