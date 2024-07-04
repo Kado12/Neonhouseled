@@ -41,17 +41,17 @@
     }
 }
 
-/* Additional styling to ensure space around cards */
+ 
 .container-blogs {
     margin-top: 40px;
     margin-bottom: 20px;
 }
 
-/* Blog images styling */
+ 
 .blog-img {
     width: 200px;
     height: 250px;
-    object-fit: cover; /* Ensures the image covers the area without stretching */
+    object-fit: cover;  
 
 }
 
@@ -70,7 +70,7 @@
 
 .link_blog:hover{
     background-color: #1c6f8a;
-    border-color: #1c6f8a; /* Color del borde para hover */
+    border-color: #1c6f8a;  
     color: white;
     transition: all .5s ease;
 }
