@@ -83,17 +83,17 @@ a{
 .header .menu ul .hidden-desk,.header .menu ul .hidden-desk{
 	display:none
 }
-.header .menu ul .parent-first,.header .menu ul .parent-second{
+.header .menu ul .parent-first,.header .menu ul .parent-second, .header .menu ul .parent-third {
 	position:relative
 }
-.header .menu ul .parent-first .submenu,.header .menu ul .parent-second .submenu{
+.header .menu ul .parent-first .submenu,.header .menu ul .parent-second .submenu , .header .menu ul .parent-third .submenu{
 	display:none
 }
-.header .menu ul .parent-first .submenu .submenu-element.first,.header .menu ul .parent-second .submenu .submenu-element.second{
+.header .menu ul .parent-first .submenu .submenu-element.first,.header .menu ul .parent-second .submenu .submenu-element.second, .header .menu ul .parent-third .submenu .submenu-element.third {
 	width:100%;
 	height:50%
 }
-.header .menu ul .parent-first:hover .submenu,.header .menu ul .parent-second:hover .submenu{
+.header .menu ul .parent-first:hover .submenu,.header .menu ul .parent-second:hover .submenu, .header .menu ul .parent-third:hover .submenu{
 	display:flex;
 	position:absolute;
 	top:55px;
@@ -106,10 +106,10 @@ a{
 	z-index:5;
 	padding:0 20px
 }
-.header .menu ul .parent-first:hover .submenu li a,.header .menu ul .parent-second:hover .submenu li a{
+.header .menu ul .parent-first:hover .submenu li a,.header .menu ul .parent-second:hover .submenu li a, .header .menu ul .parent-third:hover .submenu li a{
 	color:#9d9d9d
 }
-.header .menu ul .parent-first:hover .submenu li a:hover,.header .menu ul .parent-second:hover .submenu li a:hover{
+.header .menu ul .parent-first:hover .submenu li a:hover,.header .menu ul .parent-second:hover .submenu li a:hover, .header .menu ul .parent-third:hover .submenu li a:hover{
 	text-decoration:none;
 	color:#393939
 }
