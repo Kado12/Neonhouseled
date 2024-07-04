@@ -29,9 +29,11 @@
         <nav class="menu">
             <h2 style="display:none">Menu de navegación</h2>
             <ul>
+
                 <li>
                     <a href="/">Inicio</a>
                 </li>
+
                 <li class="parent-first">
                     <p>¿Quiénes somos?</p><i class="fas fa-chevron-down first"></i>
                     <ul class="submenu first">
@@ -43,12 +45,14 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="hidden-desk first">
                     <a href="../../vistas/nosotros.php">Nosotros</a>
-                </li>
+                </li> 
                 <li class="hidden-desk second">
                     <a href="../../vistas/work_us.php">Trabaja con nosotros</a>
                 </li>
+
                 <li class="parent-second">
                     <p>Nhl Collection</p><i class="fas fa-chevron-down second"></i>
                     <ul class="submenu second">
@@ -60,20 +64,49 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="hidden-desk third">
                     <a href="../../vistas/servicios.php">Servicios</a>
                 </li>
                 <li class="hidden-desk fourth">
                     <a href="../../vistas/categoria.php">Categorías</a>
                 </li>
+
+
                 <li>
                     <a href="../../vistas/proyectos.php">Proyectos</a>
                 </li>
-                <li>
+                <!-- <li>
+                    <a href="../../vistas/contacto.php">Contáctenos</a>
+                </li> -->
+
+                <!-- Nuevo -->
+                <li class="parent-third">
+                    <p>Mas </p><i class="fas fa-chevron-down third"></i>
+                    <ul class="submenu third">
+                        <li class="submenu-element third">
+                            <a href="../../vistas/contacto.php">Contáctenos</a>
+                        </li>
+                        <li class="submenu-element third">
+                            <a href="../../vistas/blog.php">Blog</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="hidden-desk fifth">
                     <a href="../../vistas/contacto.php">Contáctenos</a>
                 </li>
+                <li class="hidden-desk sixth">
+                    <a href="../../vistas/blog.php">Blog</a>
+                </li>
+
+
                 <li>
                     <a href="#">Luces Led Programables</a>
+                </li>
+                <!-- Nuevo -->
+                <li >
+                    <a href="/login.php">Login</a>
                 </li>
             </ul>
         </nav>
