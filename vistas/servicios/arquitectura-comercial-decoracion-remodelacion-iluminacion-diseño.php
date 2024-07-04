@@ -83,7 +83,7 @@ $_SESSION['imagen'] = 'ARQUITECTURA.webp';
                 <img src="../../public/imagenes/arquitectura/AC-3.jpg" />
                 <img src="../../public/imagenes/arquitectura/AC-4.jpg" />
             </div>
-        </div>>
+        </div>
 
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
