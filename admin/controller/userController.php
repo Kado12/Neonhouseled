@@ -16,7 +16,7 @@ class UserController extends Usuario
     public function VerifyLogin($username, $password)
     {
         $this->username = $username;
-        $this->passwords = $password;
+        $this->password = $password;
 
         $infoUsuario = $this->SearchUsuario();
         //echo var_dump($infoUsuario);  

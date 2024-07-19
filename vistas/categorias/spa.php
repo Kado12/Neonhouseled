@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['categoria'] = 'SALÓN DE SPA Y BARBERÍA';
+$_SESSION['info'] = 'spa';
 $_SESSION['imagen'] = 'SALON SPA Y BARBERIA.jpg';
 ?>
 

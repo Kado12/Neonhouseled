@@ -62,7 +62,7 @@
         <h2 class="services-title">Servicios</h2>
         <div class="services-items-container">
             <div class="services-item">
-                <a href="vistas/servicios/arquitectura.php"><figure class="img-item-container">
+                <a href="vistas/servicios/arquitectura-comercial-decoracion-remodelacion-iluminacion-diseño.php"><figure class="img-item-container">
                     <img src="public/imagenes/index/arquitectura_comercial.webp" alt="Alquitectura comercial">
                 </figure></a>
                 <h3>Arquitectura comercial</h3>
@@ -74,7 +74,7 @@
                 <h3>Fabricación mobiliaria</h3>
             </div>
             <div class="services-item">
-                <a href="vistas/servicios/decoracion.php"><figure class="img-item-container">
+                <a href="vistas/servicios/comercial-decoracion-remodelacion-iluminacion-diseño.php"><figure class="img-item-container">
                     <img src="public/imagenes/index/decoracion_y_remodelacion.webp" alt="Decoración_y_remodelación">
                 </figure></a>
                 <h3>Decoración y remodelación</h3>
@@ -421,3 +421,4 @@
 </body>
 
 </html>
+<?php session_destroy();?>

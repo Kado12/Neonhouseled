@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['categoria'] = 'HOGAR';
+$_SESSION['info'] = 'hogar';
 $_SESSION['imagen'] = 'HOGAR.jpeg';
 ?>
 
