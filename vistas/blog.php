@@ -21,8 +21,7 @@
     <link rel="stylesheet" href="../public/css/shared/header.css">
     <link rel="stylesheet" href="../public/css/shared/footer.css">
 
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
@@ -93,11 +92,11 @@
                             <div class="col p-4 d-flex flex-column position-static">
                                 <strong class="d-inline-block mb-2 text-primary">Blog</strong>
                                 <h3 class="mb-4">${data.titulo}</h3>
-                                <p class="card-text mb-auto">${data.contenido}</p>
-                                <a href="${data.link}" class="link_blog">Leer más</a>
+                                <p class="card-text mb-auto">${data.resumen}</p>
+                                <a href="../vistas/blogs/mediaBlogs${data.id}.php" class="link_blog">Leer más</a>
                             </div>
                             <div class="col-auto d-none d-lg-block">
-                                <img class="blog-img" src="${list_img[intervalo]}" alt="" width="200" height="250">
+                                <img class="blog-img" src="../public/imagenes/imagesBlogBd/${data.imagen_principal}" alt="" width="200" height="250">
                             </div>
                         </div>
                     </div>

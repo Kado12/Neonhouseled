@@ -114,7 +114,6 @@
 
     </section>
 
-
     <?php require_once "layout/foother.php" ?>
     <script defer src="../public/js/contact.js"></script>
     </body>

@@ -23,10 +23,10 @@ if( isset($_SESSION['id']) ){
         <!-- Iniciao-->
        <!-- Button trigger modal -->
         <button type="button" class="btn mb-3 btn-primary btn-show" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Crear Publicacion
+        Crear Publicacion  
         </button>
 
-        <!-- Modal -->
+        <!-- Modal CREAR NUEVO -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered "> <!-- Agregamos la clase 'modal-sm' para reducir el tamaño del modal -->
                 <div class="modal-content">
@@ -40,17 +40,39 @@ if( isset($_SESSION['id']) ){
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="mb-3">
+                                            <label for="category" class="form-label">Categoria</label>
+                                            <input type="text" name="category" id="category" class="form-control" required>
+                                        </div> 
+                                        <div class="mb-3">
                                             <label for="title" class="form-label">Titulo</label>
                                             <input type="text" name="title" id="title" class="form-control" required>
-                                        </div>
+                                        </div> 
                                         <div class="mb-3">
-                                            <label for="complement" class="form-label">Contenido</label>
-                                            <textarea type="text" name="complement" id="complement" class="form-control"  style="height: 20vh;" required></textarea>
-                                        </div>
+                                            <label for="resumen" class="form-label">Resumen</label>
+                                            <textarea type="text" name="resumen" id="resumen" class="form-control"  style="height: 10vh;" required></textarea>
+
+                                        </div> 
                                         <div class="mb-3">
-                                            <label for="link" class="form-label">Link</label>
-                                            <input type="text" name="link" id="link" class="form-control" required>
+                                            <label for="subtitle" class="form-label">Subtitulo</label>
+                                            <input type="text" name="subtitle" id="subtitle" class="form-control" required>
+                                        </div> 
+                                        <div class="mb-3">
+                                            <label for="content" class="form-label">Contenido</label>
+                                            <textarea type="text" name="content" id="content" class="form-control"  style="height: 20vh;" required></textarea>
+                                        </div> 
+                                        <div class="mb-3">
+                                            <label for="image1" class="form-label">Imagen Principal</label>
+                                            <input type="file" name="image1" id="image1" class="form-control" required accept=".jpg,.jpeg,.png">
+                                        </div> 
+                                        <div class="mb-3">
+                                            <label for="image2" class="form-label">Imagen Secundaria</label>
+                                            <input type="file" name="image2" id="image2" class="form-control" required accept=".jpg,.jpeg,.png"> 
+                                        </div> 
+                                        <div class="mb-3">
+                                            <label for="linkVideo" class="form-label">Link de Video</label>
+                                            <input type="text" name="linkVideo" id="linkVideo" class="form-control" required>
                                         </div>
+
                                        
                                     </div>
                                 </div>
@@ -71,7 +93,7 @@ if( isset($_SESSION['id']) ){
             </div>
         </div>
 
-         <!-- Modal -->
+         <!-- Modal EDITAR -->
         <div class="modal fade" id="staticBackdrop_2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered "> <!-- Agregamos la clase 'modal-sm' para reducir el tamaño del modal -->
                 <div class="modal-content">
@@ -88,16 +110,39 @@ if( isset($_SESSION['id']) ){
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="mb-3">
+                                            <label for="category2" class="form-label">Categoria</label>
+                                            <input type="text" name="category2" id="category2" class="form-control" required>
+                                        </div> 
+                                        <div class="mb-3">
                                             <label for="title2" class="form-label">Titulo</label>
                                             <input type="text" name="title2" id="title2" class="form-control" required>
-                                        </div>
+                                        </div> 
                                         <div class="mb-3">
-                                            <label for="complement2" class="form-label">Contenido</label>
-                                            <textarea type="text" name="complement2" id="complement2" class="form-control"  style="height: 20vh;" required></textarea>
-                                        </div>
+                                            <label for="resumen2" class="form-label">Resumen</label>
+                                            <textarea type="text" name="resumen2" id="resumen2" class="form-control"  style="height: 10vh;" required></textarea>
+
+                                        </div> 
                                         <div class="mb-3">
-                                            <label for="link2" class="form-label">Link</label>
-                                            <input type="text" name="link2" id="link2" class="form-control" required>
+                                            <label for="subtitle2" class="form-label">Subtitulo</label>
+                                            <input type="text" name="subtitle2" id="subtitle2" class="form-control" required>
+                                        </div> 
+                                        <div class="mb-3">
+                                            <label for="content2" class="form-label">Contenido</label>
+                                            <textarea type="text" name="content2" id="content2" class="form-control"  style="height: 20vh;" required></textarea>
+                                        </div> 
+                                        <div class="mb-3">
+                                            <label for="image1_2" class="form-label">Imagen Principal</label>
+                                            <img id="previewImage1_2" src="" alt="Vista Previa Imagen1" style="width: 90px; height: 90px; margin-left: 70px; margin-bottom: 15px;">
+                                            <input type="file" name="image1_2" id="image1_2" class="form-control" accept=".jpg,.jpeg,.png">
+                                        </div> 
+                                        <div class="mb-3">
+                                            <label for="image2_2" class="form-label">Imagen Secundaria</label>
+                                            <img id="previewImage2_2" src="" alt="Vista Previa Imagen2" style="width: 90px; height: 90px; margin-left: 56px; margin-bottom: 15px;">
+                                            <input type="file" name="image2_2" id="image2_2" class="form-control"  accept=".jpg,.jpeg,.png">
+                                        </div> 
+                                        <div class="mb-3">
+                                            <label for="linkVideo2" class="form-label">Link de Video</label>
+                                            <input type="text" name="linkVideo2" id="linkVideo2" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -127,18 +172,24 @@ if( isset($_SESSION['id']) ){
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
+                        <th scope="col">CATEGORIA</th>
                         <th scope="col">TITULO</th>
+                        <th scope="col">RESUMEN</th>
+                        <th scope="col">SUBTITULO</th>
                         <th scope="col">CONTENIDO</th>
+                        <th scope="col">IMAGEN PRINCIPAL</th>
+                        <th scope="col">IMAGEN SECUNDARIA</th>
                         <th scope="col">LINK</th>
                         <th scope="col">FECHA</th>
                         <th scope="col">OPCIONES</th>
+                        
                     </tr>
                 </thead>
                 <tbody id="tableBody"></tbody>
             </table>
-
         </div>
     </main>
+
     <script>
         const objRegex_lost = {
             pass: /^(?!.*\s).*.{6,}$/,
@@ -148,47 +199,56 @@ if( isset($_SESSION['id']) ){
             waitToGo();
             waitToGoUpdate();
         });
+        // POST Function 0
         function waitToGo() {
-            const formMain = document.querySelector("#form-admin2");
-            formMain.addEventListener("submit", (e) => {
-                console.log("Boton activado");
+            const formMain = document.querySelector("#form-admin2");    //Llama al <form> con la clase 2, que es el de ADD
+            formMain.addEventListener("submit", (e) => {                //De ese form ADD, agarra su evento que es al apretar el boton "AGREGAR"
+                console.log("Boton activado");  
                 e.preventDefault();
-                validarData("title", "complement", "link", "ADD");
+                // validarData("title", "complement", "link", "ADD")
+                validarData("category", "title", "resumen", "subtitle", "content", "image1", "image2", "linkVideo", "ADD")  //Llama a la funcion validarData, con sus id("") nombres
             });
         }
+
+        //UPDATE Function 0
         function waitToGoUpdate() {
             const formMain = document.querySelector("#form-admin3");
             formMain.addEventListener("submit", (e) => {
                 console.log("Boton activado Update");
                 e.preventDefault();
-                validarData("title2", "complement2", "link2", "UPDATE");
+                // validarData("title2", "complement2", "link2", "UPDATE")
+                validarData("category2", "title2", "resumen2", "subtitle2", "content2", "image1_2", "image2_2", "linkVideo2", "UPDATE") //Como parametro ponemos UPDATE
             });
         }
-        function validarData(ti, con, lin,tipe) {
-            const titulos = document.getElementById(ti);
-            const contenidos = document.getElementById(con);
-            const links = document.getElementById(lin);
-            const idm = document.querySelector(".inputText");
+        // POST-UPDATE Function 1, Sea que llamen a esta funcion en waitToGo() o waitToGoUpdate(), con el tipe se vera si es ADD o UPDATE
+        function validarData(ca, ti, re, subti, cont, img1, img2, link, tipe) {
+            const categories = document.getElementById(ca);
+            const titles = document.getElementById(ti);
+            const resumens = document.getElementById(re);
+            const subtitles = document.getElementById(subti);
+            const contents = document.getElementById(cont);
+            const imgs1 = document.getElementById(img1);
+            const imgs2 = document.getElementById(img2);
+            const links = document.getElementById(link);
+            const idm = document.querySelector(".inputText");   //Esto es por si estamos en el modal editar, agarramos el id que ya esta en un elemento <p>
 
-            //var valor = parrafo.textContent;
-            //const idm = document.
-            //const passTrue = objRegex_lost.pass.test(pasor.value);
-
-            if (titulos.value === "") alert("Agregue un Titulo");
-
-            if (contenidos.value === "") alert("Agregue un contenido");
-
-            if (links.value === "") alert("Coloque un link");
-
-           
+            if (categories.value === "") alert("Agregue una Categoria");
+            if (titles.value === "") alert("Agregue un Titulo");
+            if (resumens.value === "") alert("Agregue un resumen");
+            if (subtitles.value === "") alert("Agregue un subtitulo");
+            if (contents.value === "") alert("Agregue Contenido");
+            if (links === "") alert("Agregue link");
 
             if (
-                titulos.value != "" &&
-                contenidos.value != "" &&
-                links.value != ""  
+                categories.value != "" &&
+                titles.value != "" &&
+                resumens.value != ""  &&
+                subtitles.value != "" &&
+                contents.value != ""
+
             ) {
                 alert("Todos los campos son correctos." + tipe);
-                if (tipe == "ADD") {
+                if (tipe == "ADD") {            //Si se va hacer un POST, nos manda a dos funciones mas de acuerdo al tipe
                     const now = new Date();
 
                     const year = now.getFullYear();
@@ -202,29 +262,41 @@ if( isset($_SESSION['id']) ){
                     const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
                     console.log(formattedDateTime);  // Esto mostrará la fecha y hora actual en formato YYYY-MM-DD HH:MM:SS
 
-                    catchDate(titulos, contenidos,links,formattedDateTime, tipe);
-                    cleanDate(titulos, contenidos,links);
-                } else if (tipe == "UPDATE") {
-                catchDateUp(idm, titulos, contenidos,links, tipe);
+                    catchDate(categories, titles, resumens, subtitles, contents, imgs1, imgs2, links,    formattedDateTime, tipe);
+                    cleanDate(categories, titles, resumens, subtitles, contents, imgs1, imgs2, links);
+                } else if (tipe == "UPDATE") {  //Si se va hacer un UPDATE, nos manda a dos funciones mas
+                catchDateUp(idm, categories, titles, resumens, subtitles, contents, imgs1, imgs2, links, tipe);
                 modificarYCerrarModal();
                 }
             }
         }
 
-        function cleanDate(n, u, p, s) {
-            n.value = "";
-            u.value = "";
-            p.value = "";
-            s.value = "";
+        // POST Function 4
+        function cleanDate(c,t,r,s,co,img,img2,l) {
+            c.value = ""
+            t.value= ""
+            r.value = ""
+            s.value = ""
+            co.value = ""
+            img.value = ""
+            img2.value = ""
+            l.value = ""
         }
 
-        function catchDate(n, u, p,f, tipe) {
+        // POST Function 2
+        function catchDate(ca,ti,re,sub,cont,i1,i2,l,      f,tipe) {
             const body = new FormData();
-            body.append("titulo", n.value);
-            body.append("contenido", u.value);
-            body.append("link", p.value);
+            body.append('nombre_categoria', ca.value.trim());
+            body.append('titulo', ti.value.trim());
+            body.append('resumen', re.value);
+            body.append('subtitulo', sub.value.trim());
+            body.append('contenido', cont.value);
+            body.append('imagen_principal', i1.files[0]);
+            body.append('imagen_secundaria', i2.files[0]);
+            body.append('videoBlog', l.value.trim());
             body.append("fecha", f);
-
+            
+            //Nos manda a la ultima funcion para un POST, por medio de type, nos dira si es un POST o UPDATE
             sentDataToServerSide(body, tipe);
         }
         function modificarYCerrarModal() {
@@ -232,16 +304,39 @@ if( isset($_SESSION['id']) ){
             var modalInstance = bootstrap.Modal.getInstance(modal);
             modalInstance.hide();
         }
-        function catchDateUp(i, n, u, p,  tipe) {
+
+        //UPDATE Function 2
+        function catchDateUp(i,ca,ti,re,sub,cont,i1,i2,l,  tipe) {
             const body = new FormData();
             body.append("id", i.textContent);
-            body.append("titulo", n.value);
-            body.append("contenido", u.value);
-            body.append("link", p.value);
+            body.append('nombre_categoria', ca.value.trim());
+            body.append('titulo', ti.value.trim());
+            body.append('resumen', re.value);
+            body.append('subtitulo', sub.value.trim());
+            body.append('contenido', cont.value);
+            body.append('videoBlog', l.value.trim());
+
+            // chekea si ya hay un documento subido en el inputFile, sino coge su ruta que no ha cambiado y que lo pusimos en un atributo nuevo
+            // Si hay una imagen nueva, la ruta antigua lo pasamos al body para asi eliminar la imagen antigua
+            if (i1.files.length > 0) {
+                body.append('imagen_principal', i1.files[0]);
+                body.append('imagen_principal_antigua', i1.getAttribute('data-existing-file'));
+            } else {
+                body.append('imagen_principal', i1.getAttribute('data-existing-file'));
+            }
+
+            if (i2.files.length > 0) {
+                body.append('imagen_secundaria', i2.files[0]);
+                body.append('imagen_secundaria_antigua', i2.getAttribute('data-existing-file'));
+            } else {
+                body.append('imagen_secundaria', i2.getAttribute('data-existing-file'));
+            }
             
 
             sentDataToServerSide(body, tipe);
         }
+
+        // POST Function 3, depende del type si es POST o UPDATE
         function sentDataToServerSide(form, tipe) {
             fetch(`../../../app/trigger/posteo.php?action=${tipe}`, {
                 method: "POST",
@@ -258,27 +353,37 @@ if( isset($_SESSION['id']) ){
 
         const tableBody = document.getElementById("tableBody");
 
+        // METODO ELIMINAR
         tableBody.addEventListener("click", (e) => {
             const button = e.target.closest("button");
 
             if (button) {
                 const tr = button.closest("tr");
 
+                const img1Element = tr.querySelector(".image1");
+                const img2Element = tr.querySelector(".image2");
+                //Agarramos la ruta de las imagenes de la fila que se va a eliminar, para eliminar las imagenes  
+                const img1 = img1Element.getAttribute('ruta1');
+                const img2 = img2Element.getAttribute('ruta2');
+                
+
                 const id = tr.getAttribute("data-id");
                 const action = button.getAttribute("data-action");
 
                 if (action == "eliminar") {
                 let condicion = confirm("Desea Continuar?");
+                alert(img1);
                 if (condicion) {
                     tr.remove();
-
-                    fetch(`../../../app/trigger/posteo.php?action=DELETE&id=${id}`)
+                    fetch(`../../../app/trigger/posteo.php?action=DELETE&id=${id}&image1=${img1}&image2=${img2}`)
                     .then((res) => res.json())
                     .then(console.log);
                 }
                 }
             }
         });
+
+        //Funcion GET ALL
         const dataRender = () => {
         fetch("../../../app/trigger/posteo.php?action=GET")
             .then((res) => res.json())
@@ -287,9 +392,14 @@ if( isset($_SESSION['id']) ){
                     return `
                     <tr data-id="${data.id}">
                         <td>${data.id}</td>
+                        <td>${data.nombre_categoria}</td>
                         <td>${data.titulo}</td>
-                        <td>${data.contenido}</td>
-                        <td>${data.link}</td>
+                        <td>${data.resumen}</td>
+                        <td>${data.subtitulo}</td>
+                        <td>${data.contenido} </td>
+                        <td><img class="image1" ruta1="${data.imagen_principal}" id="imagen1" src="../${data.imagen_principal}" alt="Imagen Principal" style="width: 90px; height: 90px;"></td>
+                        <td><img class="image2" ruta2="${data.imagen_secundaria}" id="imagen2" src="../${data.imagen_secundaria}" alt="Imagen Secunaria" style="width: 90px; height: 90px;"></td>
+                        <td>${data.videoBlog}</td>
                         <td>${data.fecha}</td>
                         <td><button data-action="eliminar" class="btnEliminar"  style="border:none;margin-right:10px;color:red;" aria-describedby="eliminar"><ion-icon name="trash-outline"></ion-icon></button>
 
@@ -312,30 +422,62 @@ if( isset($_SESSION['id']) ){
                     })
                         .then((res) => res.json())
                         .then((data) => {
-                            const userData = data[0];
-                            //console.log(userData);
-                            //console.log(userData.rol);
-                            //console.log(userData.id);
-                            //console.log(userData.contrasena);
-                            //console.log(userData.usuario);
-                            //console.log(userData.nombre);
+                            const userData = data[0];   //En "userData", almacenamos el json que nos entrega sobre esa columna nada mas, con su id
                             
-                            const ids = document.querySelector(".inputText");
-                            const titu = document.getElementById("title2");
-                            const conte2 = document.getElementById("complement2");
-                            const link2 = document.getElementById("link2");
+                            const ids = document.querySelector(".inputText");   //Agarramos los elementos del modal EDITAR
+                            const cate2 = document.getElementById("category2")
+                            const titu2 = document.getElementById("title2");
+                            const res2 = document.getElementById("resumen2");
+                            const subti2 = document.getElementById("subtitle2");
+                            const conte2 = document.getElementById("content2");
+                            const i1_2 = document.getElementById("image1_2");
+                            const i2_2 = document.getElementById("image2_2");
+                            const link2 = document.getElementById("linkVideo2");
 
                             
                             ids.textContent = userData.id;
-                            titu.value = userData.titulo;
+                            cate2.value = userData.nombre_categoria
+                            titu2.value = userData.titulo;
+                            res2.value = userData.resumen;
+                            subti2.value = userData.subtitulo;
                             conte2.value = userData.contenido;
-                            link2.value = userData.link;
+                            //Creamos un atributo nuevo que contenga la ruta original, no importa si el file cambia, esta fue la ruta y/o nombre original de la imagen
+                            i1_2.setAttribute('data-existing-file', userData.imagen_principal);
+                            i2_2.setAttribute('data-existing-file', userData.imagen_secundaria);
+
+
+
+                            previewImage1_2.src = `../${userData.imagen_principal}`;
+                            previewImage2_2.src = `../${userData.imagen_secundaria}`;
+
+                            link2.value = userData.videoBlog;
                         
                         })
                         .catch((error) => {
                             console.error("Error al obtener los datos:", error);
                         });
+                    // Escuchar los cambios en los inputs de archivo para actualizar la vista previa
+                    document.getElementById('image1_2').addEventListener('change', function (event) {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                        document.getElementById('previewImage1_2').src = e.target.result;
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                    });
 
+                    document.getElementById('image2_2').addEventListener('change', function (event) {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                        document.getElementById('previewImage2_2').src = e.target.result;
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                    });
                     });
                 });
             });
@@ -353,7 +495,6 @@ if( isset($_SESSION['id']) ){
 <?php require_once ("../utils/enlacesDatatables.php"); ?>
     <!-- Script para el sidebar -->
     <script src="../../js/js-admin.js"></script>
-    
 </body>
 
 </html>
