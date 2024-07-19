@@ -78,7 +78,6 @@
             setTimeout(() => formulario_mensaje.setAttribute('style', 'display:none'), 1500)
           } else { 
             location.reload() 
-            alert("a")
           }
         })
 
